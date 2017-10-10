@@ -6,11 +6,13 @@
 package br.edu.ifpb.atividade.cdi.jsf.modelo;
 
 import java.io.Serializable;
+import javax.inject.Inject;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 /**
@@ -34,8 +36,20 @@ public class Produto implements  Serializable{
     private double unitario;
     @Column(length = 30, nullable = false)
     private String marca;
-
+    
+    @OneToOne
+    @Inject
+    private Categoria categoria;
+    
     public Produto() {
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     
@@ -86,6 +100,8 @@ public class Produto implements  Serializable{
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    
     
     
     

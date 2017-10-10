@@ -29,6 +29,10 @@ public class Categoria implements Serializable
     @Column(length = 30, unique = true, nullable = false)
     private String nome;
 
+    public Categoria(String nome) {
+        this.nome =nome;
+    }
+
     public int getId() {
         return id;
     }
