@@ -24,7 +24,7 @@ public class Categoria implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private int codigo;
     
     @Column(length = 30, unique = true, nullable = false)
     private String nome;
@@ -33,12 +33,12 @@ public class Categoria implements Serializable
         this.nome =nome;
     }
 
-    public int getId() {
-        return id;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getNome() {
@@ -53,7 +53,7 @@ public class Categoria implements Serializable
     }
 
     public Categoria(int id, String nome) {
-        this.id = id;
+        this.codigo = id;
         this.nome = nome;
     }
         
