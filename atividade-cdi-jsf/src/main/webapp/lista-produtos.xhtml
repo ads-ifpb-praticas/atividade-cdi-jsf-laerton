@@ -28,12 +28,12 @@
                             #{produto.marca}
                         </h:column>
                         <h:column>
-                            <f:facet name="header">Preço</f:facet>
-                            #{produto.preco}
+                            <f:facet name="header">Preço Unitario</f:facet>
+                            #{produto.unitario}
                         </h:column>
                         <h:column>
                             <f:facet name="header">Foto</f:facet>
-                            <img src="data:image/jpg;base64,#{produto.foto}" width="150px"/>
+                            <img src="data:image/jpg;base64,#{produto.pathPhoto}" width="150px"/>
                         </h:column>
                     </h:dataTable>
                 </section>
